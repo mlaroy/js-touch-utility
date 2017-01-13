@@ -1,3 +1,4 @@
+# Touch Utility for ES6
 A tiny library to detect touch and swipe, and emit events.
 
 ## Initialize
