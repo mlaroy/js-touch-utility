@@ -33,3 +33,7 @@ el.addEventListener('swiperight', function(){
 
 #### To Do
 Add mouse/drag events.
+
+
+---
+Find me on [twitter](https://twitter.com/laroymike), and on the regular old [web](http://mikelaroy.ca)
