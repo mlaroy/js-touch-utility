@@ -15,17 +15,17 @@ export default class TouchUtil {
 
   init() {
     this.el.addEventListener('touchstart', this.touchStart.bind(this) );
-    this.el.addEventListener('touchmove', this.touchMove.bind(this)  );
-    this.el.addEventListener('touchend', this.touchEnd.bind(this)  );
+    this.el.addEventListener('touchmove', this.touchMove.bind(this) );
+    this.el.addEventListener('touchend', this.touchEnd.bind(this) );
   }
 
-  //A reset method used after each detection is calculated
+  // A reset method used after each detection is calculated
   touchReset() {
     this.touchVars.touchStarted = false;
     this.touchVars.touchMoveX = 0;
   }
 
-  //Fired when a user first touches the screen
+  // Fired when a user first touches the screen
   touchStart(e) {
     e.stopPropagation();
     if(!this.touchVars.touchStarted) {
@@ -35,7 +35,7 @@ export default class TouchUtil {
     }
   }
 
-  //Fired when a user moves while touching the screen
+  // Fired when a user moves while touching the screen
   touchMove(e) {
     e.stopPropagation();
     let touch = e.changedTouches[0];
@@ -43,11 +43,11 @@ export default class TouchUtil {
   }
 
   touchEnd(e) {
-    //Stop the click event from happening.
-    //This is what speeds up the touch interaction.
+    // Stop the click event from happening.
+    // This is what speeds up the touch interaction.
     e.preventDefault();
 
-    //Now emit the events be it a swipe or a touch
+    // Now emit the events be it a swipe or a touch
     const diff = Math.abs(this.touchVars.touchStartX - this.touchVars.touchMoveX);
 
     if(diff > this.defaults.threshold && this.touchVars.touchMoveX !== 0) {
