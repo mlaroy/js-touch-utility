@@ -6,25 +6,25 @@ Import and initialize the touch utility.
 ```
 import TouchUtil from './touch-utility';
 
-let el = document.querySelector('.touch-el');
-new TouchUtil( el ); 
+const el = document.querySelector('.touch-el');
+const touchEl = new TouchUtil( el ); 
 ```
 
 ## Basic Usage
 ```
-el.addEventListener('tap', function(){
+touchEl.on('tap', function(){
   // do stuff on tap
 });
 
-el.addEventListener('swipe', function(){
+touchEl.on('swipe', function(){
   // do stuff on swipe
 });
 
-el.addEventListener('swipeleft', function(){
+touchEl.on('swipeleft', function(){
   // do stuff on swipe left
 });
 
-el.addEventListener('swiperight', function(){
+touchEl.on('swiperight', function(){
   // do stuff on swipe right
 });
 
