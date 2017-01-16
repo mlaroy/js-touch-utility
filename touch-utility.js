@@ -18,6 +18,10 @@ export default class TouchUtil {
     this.el.addEventListener('touchmove', this.touchMove.bind(this) );
     this.el.addEventListener('touchend', this.touchEnd.bind(this) );
   }
+  
+  on(event, func) {
+    this.el.addEventListener(event, func);
+  }
 
   // A reset method used after each detection is calculated
   touchReset() {
