@@ -1,3 +1,10 @@
+/**
+ * TouchUtil
+ *
+ * Author: Michael LaRoy
+ * Repo: https://github.com/mlaroy/js-touch-utility
+*/
+
 export default class TouchUtil {
 
   constructor(el) {
